@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Diary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Travel Diary</h1>
+    </header>
+    <main>
+
+    <form>
+        <input 
+            type='text'
+            id="city"
+            placeholder="City Name"/>
+        <input 
+            type='text'
+            id="state"
+            placeholder='State Name'/>
+        <input 
+            type='text'
+            id="favorite-thing"
+            placeholder='What was your favorite thing you saw or did?'/>
+        <input 
+            type='text'
+            id="picture"
+            placeholder='Upload a picture!'/>
+        <section id="return-trip">
+            <p>Would you return again?</p>
+            <div id="radio-container">
+                <label for="return-Absolutely!">
+                    <input
+                        type="radio"
+                        name="return"
+                        value="Absolutely!"
+                        id="return-Absolutely!"/>
+                    Absolutely!
+                </label>
+                <label for="return-probably not">
+                    <input
+                        type="radio"
+                        name="return"
+                        value="Probably not"
+                        id="return-probably not"/>
+                    Probably not
+                </label>
+                <label for="return-maybe">
+                    <input
+                        type="radio"
+                        name="return"
+                        value="Maybe"
+                        id="return-maybe"/>
+                    Maybe
+                </label>
+            </div>
+        </section>
+        <button id='add-location-button'>Add Location</button>
+    </form>
+
+    <button id='return-trip-button'>Planning your next trip?</button>
+
+    <section id="location-container"></section>
+
+    </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
