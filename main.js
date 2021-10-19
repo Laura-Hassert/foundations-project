@@ -17,9 +17,9 @@ const deleteEntry = id => axios.delete(`${baseURL}/${id}`)
     .then((res) => {diaryEntries(res.data)})
     .catch(err => console.log(err))
 
-// const getReturnTrips = () => axios.get(`${baseURL}/return-trips`)
-//     .then(diaryEntries)
-//     .catch(err => console.log(err))
+const getReturnTrips = () => axios.get(`${baseURL}/return-trips`)
+    .then((res) => {diaryEntries(res.data)})
+    .catch(err => console.log(err))
 
 
 function submitButton(e) {
@@ -69,11 +69,13 @@ function showLocations(arr) {
     }
 };
 
-// function pickNextTrip() {
+function pickNextTrip(event) {
+    e.preventDefault()
 
-// };
+    parent.open(locations[random])
+};
 
 form.addEventListener('submit', submitButton);
-// document.querySelector('#return-trip-button').addEventListener('click', pickNextTrip);
+document.querySelector('#return-trip-button').addEventListener('click', pickNextTrip);
 
 getAllEntries();
