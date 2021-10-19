@@ -1,7 +1,7 @@
 const locationContainer = document.querySelector('#location-container');
 const form = document.querySelector('form');
 
-const baseURL = 'http://localhost:4000/diary'
+const baseURL = 'https://travel-diary-lh.herokuapp.com/'
 
 const diaryEntries = ({ data: locations }) => showLocations(locations)
 
@@ -70,17 +70,10 @@ function showLocations(arr) {
 };
 
 // function pickNextTrip() {
-//     for (let i = 0; i < locations.length; i++) {
-//         if(locations.returning.value === "Absolutely!") {
-//             let nextTrip = locations
-//             console.log(nextTrip)
-//         } else {
-//             console.log('No entries meet this criteria')
-//         }
-//     }
+
 // };
 
 form.addEventListener('submit', submitButton);
-// document.querySelector('#return-trip-button').addEventListener('click', getReturnTrips);
+// document.querySelector('#return-trip-button').addEventListener('click', pickNextTrip);
 
 getAllEntries();

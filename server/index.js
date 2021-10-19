@@ -47,30 +47,27 @@ const locations = [
     }
 ]
 
-app.get('/diary', (req, res) => {
+app.get('/', (req, res) => {
     res.status(200).send(locations)
 });
 
-app.delete('/diary/:id', (req, res) => {
-    let index = locations.findIndex(elem => elem.id === +req.params.id)
-    locations.splice(index, 1)
-    res.status(200).send(locations)
+app.delete('/:id', (req, res) => {
 
-    // const { id } = req.params;
+    const { id } = req.params;
 
-    // const tgtIndex = locations.findIndex(function(entryObj) {
-    //     return entryObj.id === parseInt(id); 
-    // })
+    const tgtIndex = locations.findIndex(function(entryObj) {
+        return entryObj.id === parseInt(id); 
+    })
 
-    // if (tgtIndex === -1) {
-    //     res.status(404).send('Entry not found')
-    // } else {
-    //     locations.splice(tgtIndex, 1);
-    //     res.status(200).send(locations);
-    // }
+    if (tgtIndex === -1) {
+        res.status(404).send('Entry not found')
+    } else {
+        locations.splice(tgtIndex, 1);
+        res.status(200).send(locations);
+    }
 });
 
-app.post('/diary', (req, res) => {
+app.post('/', (req, res) => {
     const { city, state, favorite, image, returning } = req.body;
 
     const newEntry = {
@@ -87,8 +84,15 @@ app.post('/diary', (req, res) => {
     res.status(200).send(locations)
 });
 
-// app.get('/diary/return-trips', (req, res) => {
-//     res.status(200).send(locations.slice([Math.floor(Math.random() * locations.length)]))
+// app.get('/return-trips', (req, res) => {
+//     for (let i = 0; i < locations.length; i++) {
+//         if(locations.returning.value === "Absolutely!") {
+//             let nextTrip = locations.slice([Math.floor(Math.random() * locations.length)])
+//             res.status(200).send(nextTrip)
+//         } else {
+//             res.status(400).send('No trips to display')
+//         }
+//     }
 // });
 
 
