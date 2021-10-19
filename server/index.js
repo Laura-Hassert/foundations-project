@@ -84,17 +84,17 @@ app.post('/diary', (req, res) => {
     res.status(200).send(locations)
 });
 
-app.get('/diary/return-trips', (req, res) => {
-    let newArr = []
-    if(locations.returning.value === "Absolutely!") {
-        newArr.push()
-    } else {
-        res.status(400).send('No trips to display')
-    }
-    
-    let random = Math.floor(Math.random() * newArr.length)
-    res.status(200).send(random)
-});
+// app.get('/diary/return-trips', (req, res) => {
+//     let newArr = []
+//     if(locations.returning.value === "Absolutely!") {
+//         newArr.push()
+//     } else {
+//         res.status(400).send('No trips to display')
+//     }
+
+//     let random = Math.floor(Math.random() * newArr.length)
+//     res.status(200).send(random)
+// });
 
 
 const port = process.env.PORT || 4000

@@ -17,9 +17,9 @@ const deleteEntry = id => axios.delete(`${baseURL}/${id}`)
     .then((res) => {diaryEntries(res.data)})
     .catch(err => console.log(err))
 
-const getReturnTrips = () => axios.get(`${baseURL}/return-trips`)
-    .then((res) => {diaryEntries(res.data)})
-    .catch(err => console.log(err))
+// const getReturnTrips = () => axios.get(`${baseURL}/return-trips`)
+//     .then((res) => {diaryEntries(res.data)})
+//     .catch(err => console.log(err))
 
 
 function submitButton(e) {
@@ -77,7 +77,7 @@ function showLocations(arr) {
 
 form.addEventListener('submit', submitButton);
 
-let nextTripButton = document.getElementById('#return-trip-button')
-nextTripButton.addEventListener('click', getReturnTrips);
+// let nextTripButton = document.getElementById('#return-trip-button')
+// nextTripButton.addEventListener('click', getReturnTrips);
 
 getAllEntries();
