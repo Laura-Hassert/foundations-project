@@ -47,11 +47,11 @@ const locations = [
     }
 ]
 
-app.get('/', (req, res) => {
+app.get('/diary', (req, res) => {
     res.status(200).send(locations)
 });
 
-app.delete('/:id', (req, res) => {
+app.delete('/diary/:id', (req, res) => {
 
     const { id } = req.params;
 
@@ -67,7 +67,7 @@ app.delete('/:id', (req, res) => {
     }
 });
 
-app.post('/', (req, res) => {
+app.post('/diary', (req, res) => {
     const { city, state, favorite, image, returning } = req.body;
 
     const newEntry = {

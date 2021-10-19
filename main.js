@@ -1,12 +1,12 @@
 const locationContainer = document.querySelector('#location-container');
 const form = document.querySelector('form');
 
-const baseURL = 'https://travel-diary-lh.herokuapp.com/'
+const baseURL = 'https://travel-diary-lh.herokuapp.com/diary'
 
-const diaryEntries = ({ data: locations }) => showLocations(locations)
+const diaryEntries = (locations) => showLocations(locations)
 
 const getAllEntries = () => axios.get(baseURL)
-    .then(diaryEntries)
+    .then((res) => {diaryEntries(res.data)})
     .catch(err => console.log(err))
 
 const addEntry = body => axios.post(baseURL, body)
