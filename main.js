@@ -76,6 +76,8 @@ function pickNextTrip(event) {
 };
 
 form.addEventListener('submit', submitButton);
-document.querySelector('#return-trip-button').addEventListener('click', pickNextTrip);
+
+let nextTripButton = document.getElementById('#return-trip-button')
+nextTripButton.addEventListener('click', pickNextTrip);
 
 getAllEntries();
