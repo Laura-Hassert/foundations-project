@@ -10,7 +10,7 @@ const getAllEntries = () => axios.get(baseURL)
     .catch(err => console.log(err))
 
 const addEntry = body => axios.post(baseURL, body)
-    .then((res) => {diaryEntries(res.data)})
+    .then(diaryEntries)
     .catch(err => console.log(err))
 
 const deleteEntry = id => axios.delete(`${baseURL}/${id}`)

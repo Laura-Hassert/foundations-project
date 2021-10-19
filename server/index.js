@@ -79,9 +79,10 @@ app.post('/diary', (req, res) => {
         returning
     }
 
-    locations.push(newEntry);
-    id++;
+    locations.push(newEntry)
     res.status(200).send(locations)
+    id++
+    
 });
 
 // app.get('/diary/return-trips', (req, res) => {
