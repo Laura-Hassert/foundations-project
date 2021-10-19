@@ -52,22 +52,22 @@ app.get('/diary', (req, res) => {
 });
 
 app.delete('/diary/:id', (req, res) => {
-    // let index = locations.findIndex(elem => elem.id === +req.params.id)
-    // locations.splice(index, 1)
-    // res.status(200).send(locations)
+    let index = locations.findIndex(elem => elem.id === +req.params.id)
+    locations.splice(index, 1)
+    res.status(200).send(locations)
 
-    const { id } = req.params;
+    // const { id } = req.params;
 
-    const tgtIndex = locations.findIndex(function(entryObj) {
-        return entryObj.id === parseInt(id); 
-    })
+    // const tgtIndex = locations.findIndex(function(entryObj) {
+    //     return entryObj.id === parseInt(id); 
+    // })
 
-    if (tgtIndex === -1) {
-        res.status(404).send('Entry not found')
-    } else {
-        locations.splice(tgtIndex, 1);
-        res.status(200).send(locations);
-    }
+    // if (tgtIndex === -1) {
+    //     res.status(404).send('Entry not found')
+    // } else {
+    //     locations.splice(tgtIndex, 1);
+    //     res.status(200).send(locations);
+    // }
 });
 
 app.post('/diary', (req, res) => {
