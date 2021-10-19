@@ -5,6 +5,18 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../index.html'))
+  });
+
+app.get('/css', (req, res) => {
+    res.sendFile(path.join(__dirname, '../styles.css'))
+});
+
+app.get('/js', (req, res) => {
+    res.sendFile(path.join(__dirname, '../main.js'))
+});
+
 let id = 3;
 
 const locations = [
@@ -38,10 +50,23 @@ app.get('/diary', (req, res) => {
     res.status(200).send(locations)
 });
 
-app.delete(`/diary/:id`, (req, res) => {
-    let index = locations.findIndex(elem => elem.id === +req.params.id)
-    locations.splice(index, 1)
-    res.status(200).send(locations)
+app.delete('/diary/:id', (req, res) => {
+    // let index = locations.findIndex(elem => elem.id === +req.params.id)
+    // locations.splice(index, 1)
+    // res.status(200).send(locations)
+
+    const { id } = req.params;
+
+    const tgtIndex = locations.findIndex(function(entryObj) {
+        return entryObj.id === parseInt(id); 
+    })
+
+    if (tgtIndex === -1) {
+        res.status(404).send('Entry not found')
+    } else {
+        locations.splice(tgtIndex, 1);
+        res.status(200).send(locations);
+    }
 });
 
 app.post('/diary', (req, res) => {
