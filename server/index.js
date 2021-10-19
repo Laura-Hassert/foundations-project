@@ -85,12 +85,15 @@ app.post('/diary', (req, res) => {
 });
 
 app.get('/diary/return-trips', (req, res) => {
+    let newArr = []
     if(locations.returning.value === "Absolutely!") {
-        let random = Math.floor(Math.random() * locations.length)
-        res.status(200).send(random)
+        newArr.push()
     } else {
         res.status(400).send('No trips to display')
     }
+    
+    let random = Math.floor(Math.random() * newArr.length)
+    res.status(200).send(random)
 });
 
 

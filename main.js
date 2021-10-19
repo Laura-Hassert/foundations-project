@@ -69,15 +69,15 @@ function showLocations(arr) {
     }
 };
 
-function pickNextTrip(e) {
-    e.preventDefault()
+// function pickNextTrip(e) {
+//     e.preventDefault()
 
-    parent.open(locations[random])
-};
+//     parent.open(random)
+// };
 
 form.addEventListener('submit', submitButton);
 
 let nextTripButton = document.getElementById('#return-trip-button')
-nextTripButton.addEventListener('click', pickNextTrip);
+nextTripButton.addEventListener('click', getReturnTrips);
 
 getAllEntries();
