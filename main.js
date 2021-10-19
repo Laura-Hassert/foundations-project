@@ -14,7 +14,7 @@ const addEntry = body => axios.post(baseURL, body)
     .catch(err => console.log(err))
 
 const deleteEntry = id => axios.delete(`${baseURL}/${id}`)
-    .then(diaryEntries)
+    .then((res) => {diaryEntries(res.data)})
     .catch(err => console.log(err))
 
 // const getReturnTrips = () => axios.get(`${baseURL}/return-trips`)
