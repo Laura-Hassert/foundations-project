@@ -69,7 +69,7 @@ function showLocations(arr) {
     }
 };
 
-function pickNextTrip(event) {
+function pickNextTrip(e) {
     e.preventDefault()
 
     parent.open(locations[random])
