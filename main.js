@@ -85,32 +85,3 @@ form.addEventListener('submit', submitButton);
 // nextTripButton.addEventListener('click', getReturnTrips);
 
 getAllEntries();
-
-// function initMap() {
-//     const center = { lat: 39.8283, lng: 98.5795 };  
-//     const map = new google.maps.Map(
-//       document.getElementById("map") as HTMLElement,
-//       {
-//         zoom: 10,
-//         center: center
-//       }
-//     );
-//     const sanDiego = { lat: 32.7157, lng: 117.1611 }; 
-//     const NewOrleans = { lat: 29.9511, lng: 90.0715 }; 
-//     const NewYork = { lat: 40.7128, lng: 74.0060 }; 
-    
-//     const marker1 = new google.maps.Marker({
-//       position: sanDiego,
-//       map: map
-//     });
-
-//     const marker2 = new google.maps.Marker({
-//         position: NewOrleans,
-//         map: map
-//     });
-
-//     const marker3 = new google.maps.Marker({
-//         position: NewYork,
-//         map: map
-//     });
-// };
