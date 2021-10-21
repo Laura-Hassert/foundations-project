@@ -159,8 +159,8 @@ input[type='text'] {
 
 #add-trip {
     color: #e09e7e;
-    width: 150px;
-    height: auto;
+    width: 200px;
+    height: 200px;
     background-color: #31414b;
     position: relative;
     display: flex; 
