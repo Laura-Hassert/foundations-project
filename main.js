@@ -84,33 +84,33 @@ form.addEventListener('submit', submitButton);
 getAllEntries();
 
 
-document.querySelector("#add-trip").addEventListener("submit", addTrip);
-const message = document.querySelector('#message')
+// document.querySelector("#add-trip").addEventListener("submit", addTrip);
+// const message = document.querySelector('#message')
 
-function addTrip(event) {
-  event.preventDefault();
-  let inputField = document.querySelector('input')
+// function addTrip(event) {
+//   event.preventDefault();
+//   let inputField = document.querySelector('input')
 
-  const nextTrip = document.createElement('li')
+//   const nextTrip = document.createElement('li')
 
-  const cityState = document.createElement("span");
-  cityState.textContent = inputField.value;
-  nextTrip.appendChild(cityState)
+//   const cityState = document.createElement("span");
+//   cityState.textContent = inputField.value;
+//   nextTrip.appendChild(cityState)
 
-  const deleteBtn = document.createElement("button");
-  deleteBtn.textContent = "Remove";
-  deleteBtn.addEventListener("click", deleteTrip);
+//   const deleteBtn = document.createElement("button");
+//   deleteBtn.textContent = "Remove";
+//   deleteBtn.addEventListener("click", deleteTrip);
 
-  const tripId = inputField.value.replace(/\s+/g, '');
-  deleteBtn.setAttribute('id', tripId);
-  nextTrip.appendChild(deleteBtn);
+//   const tripId = inputField.value.replace(/\s+/g, '');
+//   deleteBtn.setAttribute('id', tripId);
+//   nextTrip.appendChild(deleteBtn);
 
-  const list = document.querySelector("ul");
-  list.appendChild(nextTrip);
+//   const list = document.querySelector("ul");
+//   list.appendChild(nextTrip);
 
-  inputField.value = ''
-}
+//   inputField.value = ''
+// }
 
-function deleteTrip(event) {
-    event.target.parentNode.remove();
-}
+// function deleteTrip(event) {
+//     event.target.parentNode.remove();
+// }
