@@ -156,3 +156,17 @@ input[type='text'] {
     margin: 5px;
     border-radius: 15px;
 }
+
+#form-id {
+    color: #e09e7e;
+    width: 150px;
+    height: auto;
+    background-color: #31414b;
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly; 
+    align-items: center;
+    margin: 30px;
+    border-radius: 20px;
+}
