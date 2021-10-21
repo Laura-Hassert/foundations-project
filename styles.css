@@ -148,3 +148,11 @@ input[type='text'] {
     margin-left: 30%;
     margin-right: 30%;
 }
+
+.placeholder {
+    margin-left: 5px;
+}
+
+#radio-container {
+    justify-content: space-evenly;
+}
