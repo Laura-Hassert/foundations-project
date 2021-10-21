@@ -17,7 +17,7 @@ const deleteEntry = id => axios.delete(`${baseURL}/${id}`)
     .then((res) => {diaryEntries(res.data)})
     .catch(err => console.log(err))
 
-// const getReturnTrips = () => axios.get(`${baseURL}/return-trips`)
+// const getReturnTrip = () => axios.get(`${baseURL}/return-trip`)
 //     .then((res) => {diaryEntries(res.data)})
 //     .catch(err => console.log(err))
 
@@ -81,3 +81,20 @@ form.addEventListener('submit', submitButton);
 // nextTripButton.addEventListener('click', getReturnTrips);
 
 getAllEntries();
+
+
+function dragover(event) {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'move';
+  }
+  
+  function dragstart(event) {
+    event.dataTransfer.setData('location-pin', event.target.id);
+    event.dataTransfer.effectAllowed = 'move';
+  }
+  
+  function drop(event) {
+    event.preventDefault();
+    let data = event.dataTransfer.getData('location-pin');
+    event.target.appendChild(document.getElementById(data));
+  }

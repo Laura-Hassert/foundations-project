@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Diary</title>
     <link rel="stylesheet" href="/css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -66,6 +67,20 @@
     <section id="location-container"></section>
 
     </main>
+    <div ondrop="drop(event)" ondragover="dragover(event)">
+        <section id='map'>
+            <img src='/images/USMap.png' alt='Map' style='width: 700px'>
+        </section>
+    </div>
+        <section id='location-pins'>
+            <p>Drag and drop where you've been!</p>
+            <img src='/images/location-tag.png' id='location-pin-1' alt='location pin' style='width: 20px' draggable="true" ondragstart="dragstart(event)">
+            <img src='/images/location-tag.png' id='location-pin-2' alt='location pin' style='width: 20px' draggable="true" ondragstart="dragstart(event)">
+            <img src='/images/location-tag.png' id='location-pin-3' alt='location pin' style='width: 20px' draggable="true" ondragstart="dragstart(event)">
+            <img src='/images/location-tag.png' id='location-pin-4' alt='location pin' style='width: 20px' draggable="true" ondragstart="dragstart(event)">
+            <img src='/images/location-tag.png' id='location-pin-5' alt='location pin' style='width: 20px' draggable="true" ondragstart="dragstart(event)">
+            <img src='/images/location-tag.png' id='location-pin-6' alt='location pin' style='width: 20px' draggable="true" ondragstart="dragstart(event)">
+        </section>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js"></script>

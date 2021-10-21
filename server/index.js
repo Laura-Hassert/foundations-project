@@ -85,7 +85,7 @@ app.post('/diary', (req, res) => {
 
 });
 
-// app.get('/diary/return-trips', (req, res) => {
+// app.get('/diary/return-trip', (req, res) => {
 //     let newArr = []
 //     if(locations.returning.value === "Absolutely!") {
 //         newArr.push()

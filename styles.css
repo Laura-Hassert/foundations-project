@@ -17,7 +17,7 @@ header {
     display: flex; 
     justify-content: center; 
     align-items: center;
-    color: #22333B;
+    color: #31414b;
 }
 
 main {
@@ -26,10 +26,10 @@ main {
 }
 
 form {
-    color: peachpuff;
+    color: #e09e7e;
     width: 350px;
     height: 350px;
-    background-color: #22333B;
+    background-color: #557384;
     position: relative;
     display: flex; 
     flex-direction: column;
@@ -40,20 +40,20 @@ form {
 }
 
 button {
-    background-color: papayawhip;
+    background-color: #e09e7e;
     width: 100px;
     height: 25px;
-    color: #22333B;
+    color: #557384;
     border: none;
     margin: 5px;
     border-radius: 15px;
 }
 
 #return-trip-button {
-    background-color: #22333B;
+    background-color: #557384;
     width: 100px;
     height: 50px;
-    color: papayawhip;
+    color: #e09e7e;
     border: none;
     margin: 5px;
     border-radius: 15px;
@@ -63,8 +63,8 @@ input[type='text'] {
     width: 85%;
     height: 30px;
     border: none;
-    border-bottom: 2px solid #232323;
-    color: #232323;
+    border-bottom: 2px solid #557384;
+    color: #557384;
     background-color: white;
     border-radius: 20px;
 }
@@ -96,8 +96,8 @@ input[type='text'] {
 }
 
 .location-card {
-    color: peachpuff;
-    background-color: #22333B;
+    color: #e09e7e;
+    background-color: #557384;
     width: 200px;
     margin: 20px; 
     display: flex;
@@ -118,7 +118,15 @@ input[type='text'] {
     margin: 5px 0;
 }
 
-/* .btns-container {
+#map {
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+.btns-container {
     width: 100%; 
     display: flex;
     justify-content: space-evenly;
@@ -127,4 +135,16 @@ input[type='text'] {
 
 .btns-container > button {
     width: 20px;
-} */
+}
+
+#location-pins {
+    position: relative; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px;
+    background-color: blanchedalmond;
+    margin-left: 30%;
+    margin-right: 30%;
+}
