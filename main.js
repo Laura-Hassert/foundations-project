@@ -25,6 +25,7 @@ const deleteEntry = id => axios.delete(`${baseURL}/${id}`)
 function submitButton(e) {
     e.preventDefault()
 
+    // let id = { id }
     let city = document.querySelector('#city')
     let state = document.querySelector('#state')
     let image = document.querySelector('#picture')
@@ -81,3 +82,47 @@ form.addEventListener('submit', submitButton);
 // nextTripButton.addEventListener('click', getReturnTrips);
 
 getAllEntries();
+
+
+document.querySelector("#add-trip").addEventListener("submit", addTrip);
+const message = document.querySelector('#message')
+
+function addTrip(event) {
+  event.preventDefault();
+  let inputField = document.querySelector('input')
+
+  const nextTrip = document.createElement('li')
+
+  const cityState = document.createElement("span");
+  cityState.textContent = inputField.value;
+  nextTrip.appendChild(cityState)
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Remove";
+  deleteBtn.addEventListener("click", deleteTrip);
+  
+  const tripId = inputField.value.replace(/\s+/g, '');
+  deleteBtn.setAttribute('id', tripId);
+  nextTrip.appendChild(deleteBtn);
+
+  const list = document.querySelector("ul");
+  list.appendChild(nextTrip);
+
+  inputField.value = ''
+}
+
+function deleteTrip(event) {
+    message.textContent = `${event.target.parentNode.firstChild.textContent} deleted!`
+    
+    revealMessage()
+
+    event.target.parentNode.remove();
+}
+
+function revealMessage() {
+    message.classList.remove('hide')
+    
+    setTimeout(() => {
+        message.classList.add('hide')
+    }, 1000)
+}
