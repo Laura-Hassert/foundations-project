@@ -21,6 +21,10 @@ const deleteEntry = id => axios.delete(`${baseURL}/${id}`)
 //     .then((res) => {diaryEntries(res.data)})
 //     .catch(err => console.log(err))
 
+const getMap = () => axios.get(baseURL)
+    .then(initMap())
+    .catch(err => console.log(err))
+
 
 function submitButton(e) {
     e.preventDefault()
