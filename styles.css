@@ -130,7 +130,7 @@ input[type='text'] {
 }
 
 #map {
-    height: 400px;
+    height: 300px;
     width: 70%;
     position: relative;
     display: flex; 
