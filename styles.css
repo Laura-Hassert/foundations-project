@@ -170,3 +170,17 @@ input[type='text'] {
     margin: 30px;
     border-radius: 20px;
 }
+
+li {
+    color: #e09e7e;
+    width: 200px;
+    height: auto;
+    background-color: #31414b;
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly; 
+    align-items: left;
+    margin: 30px;
+    border-radius: 20px;
+}

@@ -100,7 +100,7 @@ function addTrip(event) {
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Remove";
   deleteBtn.addEventListener("click", deleteTrip);
-  
+
   const tripId = inputField.value.replace(/\s+/g, '');
   deleteBtn.setAttribute('id', tripId);
   nextTrip.appendChild(deleteBtn);
@@ -112,17 +112,5 @@ function addTrip(event) {
 }
 
 function deleteTrip(event) {
-    message.textContent = `${event.target.parentNode.firstChild.textContent} deleted!`
-    
-    revealMessage()
-
     event.target.parentNode.remove();
-}
-
-function revealMessage() {
-    message.classList.remove('hide')
-    
-    setTimeout(() => {
-        message.classList.add('hide')
-    }, 1000)
 }
