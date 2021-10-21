@@ -67,21 +67,11 @@
 
     <section id="location-container"></section>
 
-    </main>
-    <div ondragend="drop(event)" ondrag="dragover(event)">
-        <section id='map' class='map'>
-            <img src='/images/USMap.png' alt='Map' style='width: 700px'>
-        </section>
+    <div id='map' class='map'>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_okn3X82xbpCgJtOkXnBZNa5nJFZovJQ&callback=initMap&libraries=&v=weekly"></script>
     </div>
-        <section id='location-pins'>
-            <p>Drag and drop where you've been!</p>
-            <img src='/images/location-tag.png' id='location-pin-1' alt='location pin' style='width: 20px' draggable="true" ondragstart="dragstart(event)">
-            <img src='/images/location-tag.png' id='location-pin-2' alt='location pin' style='width: 20px' draggable="true" ondragstart="dragstart(event)">
-            <img src='/images/location-tag.png' id='location-pin-3' alt='location pin' style='width: 20px' draggable="true" ondragstart="dragstart(event)">
-            <img src='/images/location-tag.png' id='location-pin-4' alt='location pin' style='width: 20px' draggable="true" ondragstart="dragstart(event)">
-            <img src='/images/location-tag.png' id='location-pin-5' alt='location pin' style='width: 20px' draggable="true" ondragstart="dragstart(event)">
-            <img src='/images/location-tag.png' id='location-pin-6' alt='location pin' style='width: 20px' draggable="true" ondragstart="dragstart(event)">
-        </section>
+
+    </main>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js"></script>

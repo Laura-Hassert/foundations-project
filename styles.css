@@ -118,14 +118,6 @@ input[type='text'] {
     margin: 5px 0;
 }
 
-#map {
-    position: relative;
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-evenly; 
-    align-items: center;
-}
-
 .btns-container {
     width: 100%; 
     display: flex;
@@ -137,16 +129,14 @@ input[type='text'] {
     width: 20px;
 }
 
-#location-pins {
-    position: relative; 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
+#map {
+    height: 400px;
+    width: 70%;
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly; 
     align-items: center;
-    padding: 10px;
-    background-color: blanchedalmond;
-    margin-left: 30%;
-    margin-right: 30%;
 }
 
 .placeholder {

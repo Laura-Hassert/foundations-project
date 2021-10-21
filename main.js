@@ -82,71 +82,31 @@ form.addEventListener('submit', submitButton);
 
 getAllEntries();
 
+function initMap(): void {
+    const center = { lat: 39.8283, lng: 98.5795 };  
+    const map = new google.maps.Map(
+      document.getElementById("map") as HTMLElement,
+      {
+        zoom: 10,
+        center: center,
+      }
+    );
+    const sanDiego = { lat: 32.7157, lng: 117.1611 }; 
+    const NewOrleans = { lat: 29.9511, lng: 90.0715 }; 
+    const NewYork = { lat: 40.7128, lng: 74.0060 }; 
+    
+    const marker1 = new google.maps.Marker({
+      position: sanDiego,
+      map: map,
+    });
 
-// function dragover(event) {
-//     event.preventDefault();
-//     event.dataTransfer.dropEffect = 'move';
-//   }
-  
-//   function dragstart(event) {
-//     event.dataTransfer.setData('location-pin-1', event.target.id);
-//     event.dataTransfer.effectAllowed = 'move';
-//   }
-  
-//   function drop(event) {
-//     event.preventDefault();
-//     let data = event.dataTransfer.getData('location-pin-1');
-//     event.target.appendChild(document.getElementById(data));
-//   }
+    const marker2 = new google.maps.Marker({
+        position: NewOrleans,
+        map: map,
+    });
 
-
-
-  document.addEventListener("dragstart", function(event) {
-    event.dataTransfer.setData("location-pin-1", event.target.id);
-    document.getElementById("location-pin-1").innerHTML = "Started to drag the pin.";
-  });
-  
-//   // While dragging the p element, change the color of the output text
-  document.ad 
-  
-  // Output some text when finished dragging the p element and reset the opacity
-  document.addEventListener("dragend", function(event) {
-    document.getElementById("location-pin-1").innerHTML = "Finished dragging the pin.";
-  });
-  
-  /* Events fired on the drop target */
-  
-  // When the draggable p element enters the droptarget, change the DIVS's border style
-  document.addEventListener("dragenter", function(event) {
-    if ( event.target.className == "map" ) {
-      event.target.style.border = "3px dotted red";
-    }
-  });
-  
-  // By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element
-  document.addEventListener("dragover", function(event) {
-    event.preventDefault();
-  });
-  
-  // When the draggable p element leaves the droptarget, reset the DIVS's border style
-  document.addEventListener("dragleave", function(event) {
-    if ( event.target.className == "map" ) {
-    //   event.target.style.border = "";
-    }
-  });
-  
-  /* On drop - Prevent the browser default handling of the data (default is open as link on drop)
-     Reset the color of the output text and DIV's border color
-     Get the dragged data with the dataTransfer.getData() method
-     The dragged data is the id of the dragged element ("drag1")
-     Append the dragged element into the drop element
-  */
-  document.addEventListener("drop", function(event) {
-    event.preventDefault();
-    if ( event.target.className == "map" ) {
-      document.getElementById("location-pin-1").style.color = "";
-      event.target.style.border = "";
-      var data = event.dataTransfer.getData("location-pin-1");
-      event.target.appendChild(document.getElementById(data));
-    }
-  });
+    const marker3 = new google.maps.Marker({
+        position: NewYork,
+        map: map,
+    });
+};
