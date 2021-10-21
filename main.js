@@ -82,7 +82,7 @@ form.addEventListener('submit', submitButton);
 
 getAllEntries();
 
-function initMap(): void {
+function initMap() {
     const center = { lat: 39.8283, lng: 98.5795 };  
     const map = new google.maps.Map(
       document.getElementById("map") as HTMLElement,
