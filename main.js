@@ -40,7 +40,8 @@ function submitButton(e) {
         returning: returning.value
     }
 
-    createNewEntry(bodyObj)
+    // createNewEntry(bodyObj)
+    addEntry(bodyObj)
 
     city.value = ''
     state.value = ''

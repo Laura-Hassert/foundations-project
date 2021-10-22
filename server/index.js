@@ -18,6 +18,8 @@ app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname, '../main.js'))
 });
 
+let id = 3;
+
 const locations = [
     {
         "id": 1,
@@ -66,7 +68,6 @@ app.delete('/diary/:id', (req, res) => {
 });
 
 app.post('/diary', (req, res) => {
-    let id = 3;
     const { city, state, favorite, image, returning } = req.body;
 
     const newEntry = {
