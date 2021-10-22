@@ -18,7 +18,7 @@ app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname, '../main.js'))
 });
 
-let id = 3;
+let id = 4;
 
 const locations = [
     {
